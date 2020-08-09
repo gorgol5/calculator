@@ -1,0 +1,165 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #b6e0e8;
+  color: #f8fcfe;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.item-a,
+.item-b,
+.item-c,
+.item-d,
+.item-e,
+.item-f,
+.item-x {
+  display: grid;
+}
+
+.item-b,
+.item-c,
+.item-d,
+.item-e,
+.item-f,
+.item-x {
+  cursor: pointer;
+}
+.item-b,
+.item-c,
+.item-d {
+  text-align: center;
+}
+.item-a {
+  border-radius: 15px;
+  margin-top: 10px;
+  grid-area: a;
+}
+.item-b {
+  grid-area: b;
+}
+.item-c {
+  grid-area: c;
+}
+.item-d {
+  grid-area: d;
+}
+.item-e {
+  grid-area: e;
+}
+.item-f {
+  grid-area: f;
+}
+.item-x {
+  grid-area: x;
+}
+.container {
+  border-radius: 15px;
+  background-color: #2f313c;
+
+  margin-top: 5%;
+  margin-left: 25%;
+  display: grid;
+  width: 50%;
+  height: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+
+  grid-template-areas:
+    "a a a a"
+    "a a a a"
+    "x x x x"
+    "b c d f"
+    "b c d f"
+    "b c d f"
+    "b c e f";
+}
+.result-zero,
+.result-one,
+.result-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result-zero {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  color: #52c9dc;
+  border-bottom: 1px solid white;
+}
+.result-one {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  border-bottom: 1px solid white;
+}
+.result-two {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+}
+.result-three {
+  color: #52c9dc;
+  margin-left: 25px;
+}
+.CE,
+.divis,
+.equal,
+.minus,
+.multi,
+.plus {
+  background-color: #52c9dc;
+  border: 2px solid #2f313c;
+  text-align: center;
+  border-radius: 15px;
+  margin: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CE {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+.divis {
+  grid-column-start: 4;
+  grid-column-end: span 1;
+}
+.equal {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.minus {
+  grid-row-start: 1;
+  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+.multi {
+  grid-row-start: 2;
+  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+.plus {
+  grid-row-start: 3;
+  grid-row-end: span 2;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+.zero,
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  border-radius: 15px;
+  border: 2px solid #2f313c;
+  background-color: #1e2435;
+}
