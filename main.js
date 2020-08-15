@@ -58,40 +58,48 @@ let displayValueFourth = [];
 let displayValueFifth = [];
 plus.addEventListener("click", () => {
   div.innerHTML = "";
-  sign.innerHTML = "+";
+  sign.innerHTML = `+`;
   a = displayValue.join("");
   displayValueSecond = [];
+
   if (sign.innerHTML.includes("+")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
         if (tag.innerText.length < 11) {
-          b = displayValueSecond;
-          let sum = +a + +b;
-          displayValue = [sum];
-          displayValueSecond = div.textContent;
+          
+  
+  displayValueSecond = div.textContent;
+  b = displayValueSecond;
+  let sum = +a + +b;
+  displayValue = [sum];
         }
       });
     });
   }
+ 
 });
 let minus = document.querySelector(".minus");
 minus.addEventListener("click", () => {
   div.innerHTML = "";
   sign.innerHTML = "-";
   a = displayValue.join("");
-  displayValueThird = [];
+  displayValueSecond = [];
+  
   if (sign.innerHTML.includes("-")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
         if (tag.innerText.length < 11) {
-          f = displayValueThird;
+          displayValueSecond = div.textContent;
+          f = displayValueSecond;
           let sum = a - f;
           displayValue = [sum];
-          displayValueThird = div.textContent;
+       
+          
         }
       });
     });
   }
+
 });
 
 let multi = document.querySelector(".multi");
@@ -99,15 +107,16 @@ multi.addEventListener("click", () => {
   div.innerHTML = "";
   sign.innerHTML = "*";
   a = displayValue.join("");
-  displayValueFourth = [];
+  displayValueSecond = [];
   if (sign.innerHTML.includes("*")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
         if (tag.innerText.length < 11) {
-          d = displayValueFourth;
+          displayValueSecond = div.textContent;
+          d = displayValueSecond;
           let sum = a * d;
           displayValue = [sum];
-          displayValueFourth = div.textContent;
+         
         }
       });
     });
@@ -119,15 +128,16 @@ divis.addEventListener("click", () => {
   div.innerHTML = "";
   sign.innerHTML = "/";
   a = displayValue.join("");
-  displayValueFifth = [];
+  displayValueSecond = [];
   if (sign.innerHTML.includes("/")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
         if (tag.innerText.length < 11) {
-          e = displayValueFifth;
+          displayValueSecond = div.textContent;
+          e = displayValueSecond;
           let sum = a / e;
           displayValue = [sum];
-          displayValueFifth = div.textContent;
+          
         }
       });
     });
@@ -154,23 +164,23 @@ equal.addEventListener("click", () => {
     displayValue = [sum];
     displayValueSecond = [];
   } else if (sign.textContent.includes("-")) {
-    operate(a, f, "-");
-    let sum = a - f;
+    operate(a, b, "-");
+    let sum = a - b;
     displayValue = [sum];
-    displayValueThird = [];
+    displayValueSecond = [];
   } else if (sign.textContent.includes("*")) {
-    operate(a, d, "*");
-    let sum = a * d;
+    operate(a, b, "*");
+    let sum = a *b ;
     displayValue = [sum];
-    displayValueFourth = [];
+    displayValueSecond = [];
   } else if (sign.textContent.includes("/")) {
-    if (e == 0) {
+    if (b == 0) {
       div.innerHTML = "error";
     } else {
-      operate(a, e, "/");
-      let sum = a / e;
+      operate(a, b, "/");
+      let sum = a / b;
       displayValue = [sum];
-      displayValueFifth = [];
+      displayValueSecond = [];
     }
   }
 
