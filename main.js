@@ -2,13 +2,20 @@ let displayValue = [];
 let div = document.querySelector(".result-two");
 let result = document.querySelector(".result-one");
 let sign = document.querySelector(".result-three");
+let dot =document.querySelector(".dot")
 
-let tag = document.querySelector(".result-two");
-
+let dotFunction = function(){
+  if (div.innerText.length < 11) {
+    div.innerHTML += dot.textContent;
+    if (!div.textContent.includes("+")) {
+    displayValue.push(dot.textContent)
+    }
+}
+}
 const numbers = document.querySelectorAll(".x div");
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
-    if (tag.innerText.length < 11) {
+    if (div.innerText.length < 11) {
       div.innerHTML += number.textContent;
       if (!div.textContent.includes("+")) {
         displayValue.push(number.textContent);
@@ -16,9 +23,17 @@ numbers.forEach((number) => {
     }
   });
 });
+
+dot.addEventListener("click", dotFunction)
+if (div.textContent.includes(".")){
+    dot.removeEventListener("click", dotFunction)
+}
+  
+
 let c = "";
 let add = function (a, b) {
   c = Number(a) + Number(b);
+  
   return c;
 };
 let substract = function (a, b) {
@@ -58,14 +73,14 @@ let displayValueFourth = [];
 let displayValueFifth = [];
 plus.addEventListener("click", () => {
   div.innerHTML = "";
-  sign.innerHTML = `+`;
+  sign.innerHTML = `${displayValue} +`;
   a = displayValue.join("");
   displayValueSecond = [];
 
   if (sign.innerHTML.includes("+")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
-        if (tag.innerText.length < 11) {
+        if (div.innerText.length < 11) {
           
   
   displayValueSecond = div.textContent;
@@ -81,14 +96,14 @@ plus.addEventListener("click", () => {
 let minus = document.querySelector(".minus");
 minus.addEventListener("click", () => {
   div.innerHTML = "";
-  sign.innerHTML = "-";
+  sign.innerHTML = `${displayValue} -`;
   a = displayValue.join("");
   displayValueSecond = [];
   
   if (sign.innerHTML.includes("-")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
-        if (tag.innerText.length < 11) {
+        if (div.innerText.length < 11) {
           displayValueSecond = div.textContent;
           f = displayValueSecond;
           let sum = a - f;
@@ -105,13 +120,13 @@ minus.addEventListener("click", () => {
 let multi = document.querySelector(".multi");
 multi.addEventListener("click", () => {
   div.innerHTML = "";
-  sign.innerHTML = "*";
+  sign.innerHTML = `${displayValue} *`;
   a = displayValue.join("");
   displayValueSecond = [];
   if (sign.innerHTML.includes("*")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
-        if (tag.innerText.length < 11) {
+        if (div.innerText.length < 11) {
           displayValueSecond = div.textContent;
           d = displayValueSecond;
           let sum = a * d;
@@ -126,13 +141,13 @@ multi.addEventListener("click", () => {
 let divis = document.querySelector(".divis");
 divis.addEventListener("click", () => {
   div.innerHTML = "";
-  sign.innerHTML = "/";
+  sign.innerHTML = `${displayValue} /`;
   a = displayValue.join("");
   displayValueSecond = [];
   if (sign.innerHTML.includes("/")) {
     numbers.forEach((number) => {
       number.addEventListener("click", () => {
-        if (tag.innerText.length < 11) {
+        if (div.innerText.length < 11) {
           displayValueSecond = div.textContent;
           e = displayValueSecond;
           let sum = a / e;
@@ -148,16 +163,16 @@ let CE = document.querySelector(".CE");
 CE.addEventListener("click", () => {
   result.innerHTML = "";
   div.innerHTML = "";
+  sign.innerHTML ='';
   displayValue = [];
   displayValueSecond = [];
+  a = '';
+  b='';
 });
 let equal = document.querySelector(".equal");
 equal.addEventListener("click", () => {
   b = displayValueSecond;
-  f = displayValueThird;
-  d = displayValueFourth;
-  e = displayValueFifth;
-  // console.log(b, f, d, e);
+
   if (sign.textContent.includes("+")) {
     operate(a, b, "+");
     let sum = +a + +b;

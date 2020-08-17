@@ -71,7 +71,7 @@ body {
     "b c d f"
     "b c d f"
     "b c d f"
-    "b c e f";
+    "b e e f";
 }
 .result-zero,
 .result-one,
@@ -97,7 +97,9 @@ body {
 }
 .result-three {
   color: #52c9dc;
-  margin-left: 25px;
+  margin-left: 40px;
+  margin-top: 20px;
+  grid-row-start: 2;
 }
 .CE,
 .divis,
@@ -123,8 +125,8 @@ body {
   grid-column-end: span 1;
 }
 .equal {
-  grid-column-start: 1;
-  grid-column-end: span 2;
+  grid-column-start: 2;
+  grid-column-end: span 1;
 }
 .minus {
   grid-row-start: 1;
