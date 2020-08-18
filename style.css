@@ -67,7 +67,7 @@ body {
   grid-template-areas:
     "a a a a"
     "a a a a"
-    "x x x x"
+    "x x x f"
     "b c d f"
     "b c d f"
     "b c d f"
@@ -122,46 +122,51 @@ body {
 }
 .CE {
   grid-column-start: 1;
-  width: 310px;
+  grid-column-end: span 2;
   margin: 1%;
+  height: 96px;
 }
 
 .arrow {
-  grid-column-start: 2;
+  grid-column-start: 3;
+  grid-column-end: span 1;
   background-color: #52c9dc;
   border-radius: 15px;
   margin: 2%;
-  width: 150px;
-  height: 94px;
+
+  height: 96px;
 }
 .left-arrow {
   position: relative;
-  left: 20%;
-  height: 94px;
+  border-radius: 15px;
+  left: 25%;
+  height: 96px;
+  width: 65px;
 }
 .divis {
-  grid-column-start: 4;
-  margin: 1%;
-  width: 150px;
+  grid-row-start: 1;
+  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
 }
 .equal {
   grid-column-start: 2;
   grid-column-end: span 1;
 }
 .minus {
-  grid-row-start: 1;
-  grid-column-end: span 1;
-  grid-column-start: 1;
-  grid-column-end: span 1;
-}
-.multi {
   grid-row-start: 2;
   grid-column-end: span 1;
   grid-column-start: 1;
   grid-column-end: span 1;
 }
-.plus {
+.multi {
   grid-row-start: 3;
+  grid-column-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+.plus {
+  grid-row-start: 4;
   grid-row-end: span 2;
   grid-column-start: 1;
   grid-column-end: span 1;
