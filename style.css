@@ -116,13 +116,33 @@ body {
   justify-content: center;
   align-items: center;
 }
+.item-x {
+  justify-self: stretch;
+  display: grid;
+}
 .CE {
   grid-column-start: 1;
-  grid-column-end: span 3;
+  width: 310px;
+  margin: 1%;
+}
+
+.arrow {
+  grid-column-start: 2;
+  background-color: #52c9dc;
+  border-radius: 15px;
+  margin: 2%;
+  width: 150px;
+  height: 94px;
+}
+.left-arrow {
+  position: relative;
+  left: 20%;
+  height: 94px;
 }
 .divis {
   grid-column-start: 4;
-  grid-column-end: span 1;
+  margin: 1%;
+  width: 150px;
 }
 .equal {
   grid-column-start: 2;
