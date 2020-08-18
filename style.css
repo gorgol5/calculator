@@ -205,7 +205,27 @@ body {
     height: 48px;
     width: 32px;
   }
-  .body {
-    margin: 5px;
+  .zero,
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine,
+  .dot {
+    border-radius: 10px;
+    border: 1px solid #2f313c;
+  }
+  .CE,
+  .divis,
+  .equal,
+  .minus,
+  .multi,
+  .plus {
+    border-radius: 10px;
+    border: 1px solid #2f313c;
   }
 }
