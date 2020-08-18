@@ -190,3 +190,12 @@ body {
   border: 2px solid #2f313c;
   background-color: #1e2435;
 }
+@media (max-width: 600px) {
+  .left-arrow {
+    position: relative;
+    border-radius: 15px;
+    left: 25%;
+    height: 48px;
+    width: 32px;
+  }
+}
