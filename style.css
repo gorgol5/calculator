@@ -191,6 +191,12 @@ body {
   background-color: #1e2435;
 }
 @media (max-width: 600px) {
+  .CE {
+    max-height: 75px;
+  }
+  .arrow {
+    max-height: 75px;
+  }
   .left-arrow {
     position: relative;
     border-radius: 15px;
